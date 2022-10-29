@@ -33,18 +33,19 @@ import Foundation
 
 
 func countStr() {
-        var string = "яблоко,груша,мед,телевизор,телефон,солнце,луна,хлебница,картошка,кит,кот,предложение,семь,цифра,блин,произведение,звезда,мышеловка,сыр,сырник,"
+        let string = "яблоко,груша,мед,телевизор,телефон,солнце,луна,хлебница,картошка,кит,кот,предложение,семь,цифра,блин,произведение,звезда,мышеловка,сыр,сырник,"
     
         var count = 0
         var strPust = ""
             for char in string{
                     if char == "," {
-                        print("\(strPust) - \(count) букв")
+                        strPust += " \(count) букв \n"
                         count = 0
                     } else {
-                        print(char)
+                        strPust += String(char)
                         count += 1
                     }
             }
+    print(strPust)
     }
 countStr()
